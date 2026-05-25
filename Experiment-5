@@ -1,0 +1,37 @@
+Q.1>Write a Python program that prompts the user to enter a year. The program should determine if the year is a leap year or not and print the appropriate message.
+
+Input Format:
+
+A single line contains an integer representing the year.
+
+Output Format:
+Print "Leap year" if it is a leap year. Otherwise, print "Not a leap year".
+
+Code-
+year = int(input())
+if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):
+    print("Leap year")
+else:
+    print("Not a leap year")
+
+Q.2>Write a program to calculate the total marks, aggregate percentage, and grade of a student based on marks in four subjects. 
+Code-
+
+marks = list(map(int, input().split()))
+total = sum(marks)
+aggregate = (total / 400) * 100  # assuming each subject is out of 100
+if aggregate >= 75:
+    grade = "Distinction"
+elif aggregate >= 60:
+    grade = "First Division"
+elif aggregate >= 50:
+    grade = "Second Division"
+elif aggregate >= 40:
+    grade = "Third Division"
+else:
+    grade = "Fail"
+print(total)
+print(f"{aggregate:.2f}")
+print(grade)
+
+
