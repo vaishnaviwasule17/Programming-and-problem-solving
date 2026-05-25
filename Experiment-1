@@ -1,0 +1,53 @@
+Q.1>Write a Python program that calculates the area of a circle when the radius is provided by the user. Use π = 3.14 and display the area.
+Input Format:
+A single line containing a floating-point number representing the radius.
+Output Format:
+Print the computed area of the circle formatted to 4 decimal places
+
+Code-
+
+radius = float(input())
+pi = 3.14
+area = pi * radius * radius
+print(f"{area:.4f}")
+
+Q.2>Write a Python program to calculate the area of a rectangle given its length and width.
+
+Code
+length = float(input())
+width = float(input())
+area = length * width
+print(f"{area:.2f}")
+
+Q.3>Write a Python program that prompts the user to enter the side_length
+ of a square and computes the area of the square.
+Code
+side_length = int(input())
+area = side_length * side_length
+print(f"{area:}")
+
+Q.4>Write a Python program that prompts the user to enter the triangle's base and height and computes the triangle's area.
+Code-
+base = float(input())
+height = float(input())
+area = 0.5 * base * height
+print(f"{area:.2f}")
+
+Q.5>Write a Python program to determine whether a student passed the exam or not based on their marks.
+
+Code-
+marks = int(input())
+if marks >= 40:
+	print("Pass")
+else:
+	print("Fail")
+
+
+
+
+
+
+
+
+
+
