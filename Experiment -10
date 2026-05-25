@@ -1,0 +1,84 @@
+Q.1>Write a program that takes a string as input and prints the total count of vowels in that string. Consider both uppercase and lowercase.
+
+Input Format:
+A single line contains a string that may contain letters, numbers, and punctuation.
+
+Output Format:
+An integer representing the total number of vowels in the input string.
+
+Code-
+s = input()
+vowels = "aeiouAEIOU"
+count = 0
+for ch in s:
+    if ch in vowels:
+        count += 1
+print(count)
+
+Q.2>Write a Python program to take a string as input and check whether the given string is a palindrome or not. A palindrome is a string that reads the same forwards and backward.
+
+Input Format:
+A single line of input contains a string
+
+Output Format:
+If the input string is a palindrome, print "Palindrome", otherwise print "Not a Palindrome"
+
+Code-
+s = input().strip()
+
+if s == s[::-1]:
+    print("Palindrome")
+else:
+    print("Not a Palindrome")
+
+Q.2>Write a Python program to remove all punctuation marks from a given string and print the resulting string.
+
+
+
+Punctuation marks are special characters that are not letters, digits, or spaces.
+
+
+
+The program should keep all letters (uppercase and lowercase), digits, and spaces, but remove all punctuation marks.
+
+
+
+Input Format:
+
+Single line contains a string (may include letters, digits, spaces, and punctuation marks).
+
+
+Output Format:
+
+Print the string after removing all punctuation marks.
+Code-
+s = input()
+result = ""
+for ch in s:
+    if ch.isalnum() or ch == " ":
+        result += ch
+print(result)
+
+Q.3>Write a Python program that prints the reverse of a given input string. The program uses a reverse_string() function that takes a string as input and returns its reversed string.
+
+
+
+Input Format:
+
+The program prompts "Enter a string: " and reads a string representing the string to be reversed.
+
+
+Output Format:
+
+The first line prints the original string, in the format:
+Code-
+def reverse_string( s        ):
+
+    return s[::-1]
+
+
+user_input = input("Enter a string: ")
+result = reverse_string(user_input)
+print(f"Original String: {user_input}")
+print(f"Reversed String: {result}")
+
