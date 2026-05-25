@@ -1,0 +1,62 @@
+Q.1.Write a Python program to perform the multiplication of two square matrices. The program should take two matrices as input and output their product.
+Code-
+n = int(input("dimension: "))
+
+
+print("first matrix:")
+matrix1 = []
+for i in range(n):
+    matrix1.append(list(map(int, input().split())))
+
+
+print("second matrix:")
+matrix2 = []
+for i in range(n):
+    matrix2.append(list(map(int, input().split())))
+
+
+result = [[0 for _ in range(n)] for _ in range(n)]
+
+
+for i in range(n):
+    for j in range(n):
+        for k in range(n):
+            result[i][j] += matrix1[i][k] * matrix2[k][j]
+
+
+print("Resultant Matrix:")
+for row in result:
+    print(*row)
+
+
+Q.2>Write a Python program to print all prime numbers within a given range (inclusive of both start and end values).
+Input Format:
+
+First line contains an integer representing the start of the range.
+Second line contains an integer representing the end of the range.
+
+
+Output Format:
+
+Print all prime numbers in the given range (including start and end if they are prime). Print each prime number on a separate line.
+If no prime numbers exist in the range, print: "No primes".
+
+Code-
+start = int(input())
+end = int(input())
+
+found = False
+
+for num in range(start, end + 1):
+    if num > 1:
+        is_prime = True
+        for i in range(2, int(num ** 0.5) + 1):
+            if num % i == 0:
+                is_prime = False
+                break
+        if is_prime:
+            print(num)
+            found = True
+
+if not found:
+    print("No primes")
