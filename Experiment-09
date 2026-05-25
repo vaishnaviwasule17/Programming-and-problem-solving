@@ -1,0 +1,29 @@
+Write a program that takes a string as input and prints the total count of vowels in that string. Consider both uppercase and lowercase.
+
+s = input()
+vowels = "aeiouAEIOU"
+count = 0
+for ch in s:
+    if ch in vowels:
+        count += 1
+print(count)
+
+Q.2>Write a Python program to take a string as input and check whether the given string is a palindrome or not. A palindrome is a string that reads the same forwards and backward.
+
+
+
+Input Format:
+
+A single line of input contains a string
+
+
+Output Format:
+
+If the input string is a palindrome, print "Palindrome", otherwise print "Not a Palindrome"
+s = input().strip()
+
+if s == s[::-1]:
+    print("Palindrome")
+else:
+    print("Not a Palindrome")
+
