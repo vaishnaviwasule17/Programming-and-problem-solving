@@ -1,0 +1,20 @@
+Q.1>Write a Python program that prompts the user to enter three integers. Print the largest of the three integers.
+Input Format:
+The program will prompt the user to enter three integers, one per line.
+Output Format:
+The output will display the largest integer among the three integers.
+
+Code-
+num1 = int(input())
+num2 = int(input())
+num3 = int(input())
+largest = max(num1, num2, num3)
+print(largest)
+
+Q.2>Write a Python program to convert temperature from Celsius to Fahrenheit.
+
+Code-
+celsius = float(input())
+fahrenheit = (celsius * 9/5) + 32
+print(f"{fahrenheit:.2f}")
+
