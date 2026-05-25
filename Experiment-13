@@ -1,0 +1,12 @@
+Write a Python program using modular programming to generate the Fibonacci sequence up to a given maximum value.
+Module Requirements
+Create a module fibonacci_module.py with a function generate_fibonacci_sequence(max_value) that returns list of all Fibonacci numbers less than or equal to the maximum value.
+ Code-
+import fibonacci_module
+n = int(input())
+
+if n > 0:
+	fib_series = fibonacci_module.generate_fibonacci_sequence(n)
+	print(' '.join(map(str, fib_series)))
+else:
+	print("Please enter a positive integer")
