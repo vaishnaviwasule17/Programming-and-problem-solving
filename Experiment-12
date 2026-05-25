@@ -1,0 +1,25 @@
+Write a Python program to manage a phone number database using a dictionary. The dictionary stores contact names as keys and phone numbers as values.
+The program should support three operations: adding a contact (if the name already exists, update the phone number), removing a contact (if the name does not exist, ignore the operation), and displaying all contacts in alphabetical order by name.
+
+Code-
+n = int(input().strip())
+contacts = {}
+
+for _ in range(n):
+    command = input().strip().split()
+
+    if command[0] == "ADD":
+        name = command[1]
+        phone = command[2]
+        contacts[name] = phone  # Add or update
+
+    elif command[0] == "REMOVE":
+        name = command[1]
+        contacts.pop(name, None)  # Remove if exists, else ignore
+
+    elif command[0] == "DISPLAY":
+        if not contacts:
+            print("No contacts")
+        else:
+            for name in sorted(contacts):
+                print(f"{name}: {contacts[name]}")
